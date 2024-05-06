@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FuelConsumption</string>
+    <string name="qtd_combustivel">Quantidade de Combustível (l)</string>
+    <string name="consumo_medio">Consumo Médio (Km/l)</string>
+    <string name="autonomia">Você ainda poderá percorrer</string>
+    <string name="calcular">Calcular</string>
+</resources>
