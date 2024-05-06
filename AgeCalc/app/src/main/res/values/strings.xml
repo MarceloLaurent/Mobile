@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AgeCalc</string>
+    <string name="dia_nasc">Dia do Nascimento</string>
+    <string name="mes_nasc">Mês do Nascimento</string>
+    <string name="ano_nasc">Ano do Nascimento</string>
+    <string name="calcular">Calcular</string>
+    <string name="idade">Você tem</string>
+</resources>
