@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FuelPriceCalc</string>
+    <string name="gasolina">Preço Gasolina</string>
+    <string name="alcool">Preco Álcool</string>
+    <string name="melhor_combustivel">É mais rentável abastecer com </string>
+    <string name="comparar">Comparar</string>
+</resources>
