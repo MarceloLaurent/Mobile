@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RollDice</string>
+    <string name="qtd1">1 Dado</string>
+    <string name="qtd2">2 Dados</string>
+    <string name="qtd3">3 Dados</string>
+    <string name="lancar">Lançar</string>
+</resources>
