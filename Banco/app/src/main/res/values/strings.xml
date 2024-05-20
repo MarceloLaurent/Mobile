@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Banco</string>
+    <string name="poupanca">Conta Poupança</string>
+    <string name="especial">Conta Especial</string>
+    <string name="cliente">Nome</string>
+    <string name="conta">Número da Conta</string>
+    <string name="saldo">Saldo</string>
+    <string name="rendimento">Dia de Rendimento</string>
+    <string name="limite">Limite</string>
+    <string name="saque">Saque</string>
+    <string name="deposito">Depósito</string>
+    <string name="valor">Valor</string>
+    <string name="operacao">Efetuar Operação</string>
+</resources>
