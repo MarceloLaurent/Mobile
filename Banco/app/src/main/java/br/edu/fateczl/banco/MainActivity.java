@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton rbSacar;
     private RadioButton rbDepositar;
 
+    private ContaPoupanca contaPoupanca;
+    private ContaEspecial contaEspecial;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void executarOperacao() {
-        String cliente = etCliente.getText().toString();
+        String nome = etCliente.getText().toString();
         int numConta = Integer.parseInt(etConta.getText().toString());
         float saldoInicial = Float.parseFloat(etSaldo.getText().toString());
         float valor = Float.parseFloat(etValor.getText().toString());
