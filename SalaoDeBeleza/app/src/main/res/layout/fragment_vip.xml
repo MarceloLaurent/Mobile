@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentVip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VipFragment">
+
+    <EditText
+        android:id="@+id/etTelefoneVip"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="46dp"
+        android:ems="10"
+        android:hint="@string/telefone"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarClienteVip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClienteVip" />
+
+    <Button
+        android:id="@+id/btnBuscarClienteVip"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etTelefoneVip"
+        app:layout_constraintTop_toBottomOf="@+id/tvClienteVip" />
+
+    <EditText
+        android:id="@+id/etNomeVip"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefoneVip" />
+
+    <EditText
+        android:id="@+id/etEnderecoVip"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/endereco"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/etCodigoVip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClienteVip" />
+
+    <EditText
+        android:id="@+id/etCodigoVip"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="157dp"
+        android:ems="10"
+        android:hint="@string/codigoVip"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvListarClienteVip"
+        app:layout_constraintEnd_toStartOf="@+id/btnModificarClienteVip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEnderecoVip" />
+
+    <Button
+        android:id="@+id/btnInserirClienteVip"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/inserir"
+        app:layout_constraintEnd_toStartOf="@+id/btnModificarClienteVip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigoVip" />
+
+    <Button
+        android:id="@+id/btnModificarClienteVip"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/modificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInserirClienteVip"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigoVip" />
+
+    <Button
+        android:id="@+id/btnListarClienteVip"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="86dp"
+        android:text="@string/listar"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluirClienteVip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInserirClienteVip" />
+
+    <Button
+        android:id="@+id/btnExcluirClienteVip"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/excluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnListarClienteVip"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarClienteVip" />
+
+    <TextView
+        android:id="@+id/tvListarClienteVip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="30dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigoVip" />
+
+    <TextView
+        android:id="@+id/tvClienteVip"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="145dp"
+        android:text="@string/vip"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/etEnderecoVip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

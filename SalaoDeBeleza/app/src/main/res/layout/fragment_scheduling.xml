@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchedulingFragment">
+
+    <TextView
+        android:id="@+id/tvAgendamento"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/agendamento"
+        app:layout_constraintBottom_toTopOf="@+id/etHorario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCodigoAgendamento"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="@string/codigo"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarAgendamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgendamento" />
+
+    <Button
+        android:id="@+id/btnBuscarAgendamento"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCodigoAgendamento"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgendamento" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="@string/data"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/etHorario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCodigoAgendamento" />
+
+    <EditText
+        android:id="@+id/etHorario"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="322dp"
+        android:ems="10"
+        android:hint="@string/horario"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvListarAgendamento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etData"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgendamento" />
+
+    <Spinner
+        android:id="@+id/spCliente"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etData" />
+
+    <Spinner
+        android:id="@+id/spServico"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spCliente" />
+
+    <Button
+        android:id="@+id/btnInserirAgendamento"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="74dp"
+        android:text="@string/inserir"
+        app:layout_constraintEnd_toStartOf="@+id/btnModificarAgendamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spServico" />
+
+    <Button
+        android:id="@+id/btnListarAgendamento"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="78dp"
+        android:text="@string/listar"
+        app:layout_constraintEnd_toStartOf="@+id/btnExcluirAgendamento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInserirAgendamento" />
+
+    <Button
+        android:id="@+id/btnModificarAgendamento"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/modificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInserirAgendamento"
+        app:layout_constraintTop_toBottomOf="@+id/spServico" />
+
+    <Button
+        android:id="@+id/btnExcluirAgendamento"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/excluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnListarAgendamento"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarAgendamento" />
+
+    <TextView
+        android:id="@+id/tvListarAgendamento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHorario" />
+</androidx.constraintlayout.widget.ConstraintLayout>

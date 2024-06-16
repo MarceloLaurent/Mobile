@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SalaoDeBeleza</string>
+    <string name="cliente">Cliente</string>
+    <string name="telefone">Telefone</string>
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereço</string>
+    <string name="vip">Cliente VIP</string>
+    <string name="codigoVip">Código VIP</string>
+    <string name="servico">Serviço</string>
+    <string name="codigo">Código</string>
+    <string name="descricao">Descrição</string>
+    <string name="valor">Valor</string>
+    <string name="agendamento">Agendamento</string>
+    <string name="data">Data</string>
+    <string name="horario">Horário</string>
+    <string name="inicio">Tititi Fashion Hair</string>
+    <string name="buscar">Buscar</string>
+    <string name="inserir">Inserir</string>
+    <string name="listar">Listar</string>
+    <string name="modificar">Modificar</string>
+    <string name="excluir">Excluir</string>
+</resources>
