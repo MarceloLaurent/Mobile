@@ -25,8 +25,8 @@ public class GenericDao extends SQLiteOpenHelper {
     private final String CREATE_TABLE_AGENDAMENTO =
             "CREATE TABLE agendamento ( " +
                     "codigo_agendamento INT NOT NULL PRIMARY KEY, " +
-                    "data DATE NOT NULL, " +
-                    "horario TIME NOT NULL, " +
+                    "data VARCHAR(20) NOT NULL, " +
+                    "horario VARCHAR(20) NOT NULL, " +
                     "nome_cliente VARCHAR(100) NOT NULL, " +
                     "descricao_servico VARCHAR(50) NOT NULL, " +
                     "total DECIMAL(10, 2) NOT NULL, " +

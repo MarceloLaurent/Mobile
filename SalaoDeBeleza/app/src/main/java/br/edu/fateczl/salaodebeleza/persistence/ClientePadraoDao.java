@@ -13,7 +13,7 @@ import java.util.List;
 import br.edu.fateczl.salaodebeleza.model.Cliente;
 import br.edu.fateczl.salaodebeleza.model.ClientePadrao;
 
-public class ClientePadraoDao implements IClientePadraoDao, ICRUDDao<Cliente>{
+public class ClientePadraoDao implements IClientePadraoDao, ICRUDDao<ClientePadrao>{
 
     private final Context context;
     private GenericDao gDao;
@@ -35,26 +35,26 @@ public class ClientePadraoDao implements IClientePadraoDao, ICRUDDao<Cliente>{
     }
 
     @Override
-    public void insert(Cliente cliente) throws SQLException {
+    public void insert(ClientePadrao cliente) throws SQLException {
         ContentValues contentValues = getContentValues(cliente);
         database.insert("cliente", null, contentValues);
     }
 
     @Override
-    public int update(Cliente cliente) throws SQLException {
+    public int update(ClientePadrao cliente) throws SQLException {
         ContentValues contentValues = getContentValues(cliente);
         return database.update("cliente", contentValues, "telefone = "
                 + cliente.getTelefone(), null);
     }
 
     @Override
-    public void delete(Cliente cliente) throws SQLException {
+    public void delete(ClientePadrao cliente) throws SQLException {
         database.delete("cliente", "telefone = " + cliente.getTelefone(), null);
     }
 
     @SuppressLint("Range")
     @Override
-    public Cliente findOne(Cliente cliente) throws SQLException {
+    public ClientePadrao findOne(ClientePadrao cliente) throws SQLException {
         String sql = "SELECT telefone, nome, endereco FROM cliente WHERE telefone = " + cliente.getTelefone();
         Cursor cursor = database.rawQuery(sql, null);
 
@@ -73,8 +73,8 @@ public class ClientePadraoDao implements IClientePadraoDao, ICRUDDao<Cliente>{
 
     @SuppressLint("Range")
     @Override
-    public List<Cliente> findAll() throws SQLException {
-        List<Cliente> clientes = new ArrayList<>();
+    public List<ClientePadrao> findAll() throws SQLException {
+        List<ClientePadrao> clientes = new ArrayList<>();
         String sql = "SELECT telefone, nome, endereco FROM cliente";
         Cursor cursor = database.rawQuery(sql, null);
 
@@ -82,7 +82,7 @@ public class ClientePadraoDao implements IClientePadraoDao, ICRUDDao<Cliente>{
             cursor.moveToFirst();
         }
         while (!cursor.isAfterLast()) {
-            Cliente cliente = new ClientePadrao();
+            ClientePadrao cliente = new ClientePadrao();
             cliente.setTelefone(cursor.getInt(cursor.getColumnIndex("telefone")));
             cliente.setNome(cursor.getString(cursor.getColumnIndex("nome")));
             cliente.setEndereco(cursor.getString(cursor.getColumnIndex("endereco")));
